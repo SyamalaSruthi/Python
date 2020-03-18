@@ -1,0 +1,14 @@
+
+
+
+
+'''
+Ask the user for a number and determine whether the number is prime or not. 
+'''
+num = int(input("Enter a number"))
+x = [i for i in range(2,num) if num % i == 0]
+print("divisors of given number is " ,x)
+if x == []:
+  print("Number is a prime")
+else:
+  print("Number is not a prime")
