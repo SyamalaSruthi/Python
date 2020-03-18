@@ -1,6 +1,176 @@
+***************
+
+'''
+Create a program that asks the user to enter their name and their age. 
+Print out a message addressed to them that tells them the year that
+they will turn 100 years old.
+'''
+import calendar
+import datetime
+
+name = input("Enter user name")
+print(name)
+age = int(input("Enter user age"))
+print(age)
+#a_age = int((2020-age)+100)
+ 
+
+current_year = int(datetime.date.today().year)
+print(current_year)
+
+print("You will become 100 in year ", (current_year-age)+100)
+
+#*****************************
+'''
+Ask the user for a number. Depending on whether the number is even or odd, 
+print out an appropriate message to the user.
+'''
+
+num = int(input("Enter a Number ")
+if num % 2 == 0:
+  print("Num is even")
+else:
+  print("Num is odd")
 
 
 
+#*********************************
+
+'''
+Take a list, say for example this one:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements of the list that are less than 5.
+'''
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+for i in a:
+  if i < 5:
+    print(i)
+    
+    (or)
+
+b = [n for n in a if n<5]
+print(b)
+
+
+#***********************************
+'''
+Create a program that asks the user for a number and then prints out a
+list of all the divisors of that number. (If you don’t know what a divisor is, 
+it is a number that divides evenly into another number.
+'''
+
+num = int(input("Enter a number"))
+print("Number you entered is", num)
+for n in range(1,num+1):
+  if num % n == 0:
+    print(n)
+    
+l = [n for n in range(1,num+1) if num % n == 0]
+print(l)
+
+
+#***********************************    
+'''
+Take two lists, say for example these two:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+and write a program that returns a list that contains only 
+the elements that are common between the lists (without duplicates). 
+Make sure your program works on two lists of different sizes.
+'''
+
+import random
+s1 = int(input("Enter size of first list"))
+s2 = int(input("Enter size of first list"))
+a = random.sample(range(1,100),s1)
+b = random.sample(range(1,100),s2)
+print(a)
+print(b)
+l3 = [n for n in a if n in b]
+print(l3)
+
+
+#****************************************
+'''
+Ask the user for a string and print out whether this string is a 
+palindrome or not. 
+'''
+
+str = input("Enter a string")
+str2 = str[::-1]
+
+if str == str2:
+  print("The string is palindrome")
+else:
+  print("The string is not palindrome")
+
+
+#*********************************
+'''
+Let’s say I give you a list saved in a variable:
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
+Write one line of Python that takes this list a and makes 
+a new list that has only the even elements of this list in it.
+'''
+
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+b = [n for n in a if n%2 == 0]
+print(b)
+
+#*******************************
+
+'''
+Make a two-player Rock-Paper-Scissors game.
+'''
+from random import randint
+
+t = ["Rock", "Paper", "Scissors"]
+computer = t[randint(0,2)]
+player = False
+
+while player == False:
+  player = input("Rock, Paper, Scissors?")
+  print("Computer -", computer)
+  if player == computer:
+    print("Game tie")
+  elif player > computer:
+    print("Player won")
+  elif player < computer:
+    print("Computer won")
+
+
+#**********************************
+'''
+Generate a random number between 1 and 9 (including 1 and 9). 
+Ask the user to guess the number, then tell them whether they guessed too low, 
+too high, or exactly right.
+'''
+import random
+r = random.randint(1,10)
+guess = 0
+
+
+while guess != -1 and guess !="exit":
+  guess = input("Enter a number between 1-9")
+  
+  if guess == "exit":
+    break
+    
+  guess = int(guess)
+    
+  if guess == r:
+    print("Guess is correct")
+  elif guess < r:
+    print("Too low")
+  else:
+    print("Too high")
+  
+input()
+
+#**********************************
 
 '''
 Ask the user for a number and determine whether the number is prime or not. 
