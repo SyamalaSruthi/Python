@@ -182,3 +182,26 @@ if x == []:
   print("Number is a prime")
 else:
   print("Number is not a prime")
+  
+  
+#*********************************
+
+'''
+Write a program that takes a list of numbers (for example, a = [5, 10, 15, 20, 25]) 
+and makes a new list of only the first and last elements of the given list.
+'''
+def ft_lt(l1):
+  return [l1[0],l1[-1]]
+
+l2 = ft_lt(l1)
+print(l2)
+  
+  #       or
+  
+usr = input("ENter csv ")
+l1 = usr.split(",")
+print(l1)
+print( [l1[0],l1[-1]])
+
+
+#***************************
