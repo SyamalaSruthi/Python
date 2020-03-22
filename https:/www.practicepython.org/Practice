@@ -205,3 +205,45 @@ print( [l1[0],l1[-1]])
 
 
 #***************************
+
+'''
+write a function to count number of strings with starting and ending letters are same in a given array 
+'''
+def fir_las(arr):
+  count = 0
+  for i in arr:
+    print(i)
+    if i[0] == i[-1]:
+      count += 1
+  return count
+
+li = ['Sruthi','abcba','vije','madam']
+print("count is", fir_las(li))
+
+*******************************
+
+'''
+Write a program (function!) that takes a list and returns a new list that contains all the elements of the first list minus all the duplicates.
+'''
+
+def removDupli(ar):
+  res = []
+  [res.append(x) for x in ar if x not in res]
+  print(res)
+
+ # (or)
+
+def remDeplStr(ar1):
+  res = []
+  for i in ar1:
+    if i not in res:
+      res.append(i)
+  print(res)
+
+arr = input("Enter CSV")
+removDupli(arr)
+strArr = input("Enter String separated by commas:")
+remDeplStr(strArr)
+
+
+********************************
