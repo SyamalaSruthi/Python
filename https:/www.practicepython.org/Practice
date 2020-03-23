@@ -216,9 +216,20 @@ def fir_las(arr):
     if i[0] == i[-1]:
       count += 1
   return count
+#       (or)
+def fir_las2(arr):
+  l2 = list(filter(lambda i:i[0]==i[-1],arr))
+  print("Total Elements are ",len(l2))
+
+#       (or)
+def fir_las3(arr):
+  l3 = [i for i in arr if i[0]==i[-1]]
+  print("Elements are", len(l3))
 
 li = ['Sruthi','abcba','vije','madam']
 print("count is", fir_las(li))
+fir_las2(li)
+fir_las3(li)
 
 *******************************
 
