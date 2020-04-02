@@ -258,3 +258,37 @@ remDeplStr(strArr)
 
 
 ********************************
+
+
+C++ program
+
+true A -> B -> C -> B
+true A -> A
+true A -> B -> A
+
+false A -> B -> C -> null
+
+bool HasCycle( Node* pHead )
+{
+  Node *p = pHead;
+  hash<Node*> seenNodes;
+  
+  while( p->next != null )
+  {
+    if( p in seenNode ) return true;
+    seenNode.insert( p );
+    p = p->next;
+  }
+  
+  return false;
+}
+          
+p - collection
+          
+A 
+B -> A
+C -> A, B
+
+******************************
+
+
